@@ -1,0 +1,11 @@
+
+.link {
+    text-decoration: none;
+    font: var(--button);
+    color: var(--gray10);
+}
+
+.link:hover {
+    color: var(--white);
+    text-decoration: underline;
+}

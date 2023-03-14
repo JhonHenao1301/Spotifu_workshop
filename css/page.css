@@ -1,0 +1,37 @@
+
+@import './search.css';
+@import './navigation.css';
+@import './header.css';
+@import './playlist-list.css';
+
+
+.page {
+    padding-inline-start: 2em;
+    padding-inline-end: 2em;
+    padding-block-end: 2em;
+}
+
+.page-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.page-block:nth-child(1) {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+.page .header {
+    margin-block-end: 1rem;
+    margin-inline-end: -1.5rem;
+    margin-inline-start: -1.5rem;
+}
+
+@supports not(backdrop-filter: blur(5px)) {
+    .page-block:nth-child(1) {
+        background: var(--gray50);
+    }
+}
